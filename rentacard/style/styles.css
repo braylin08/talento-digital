@@ -128,7 +128,7 @@ select {
     grid-template-columns: 1fr auto ;
     justify-content: end;
     align-items: center;
-    border-radius: var(--borde-redondeado);
+    /* border-radius: var(--borde-redondeado); */
     
 }
 
@@ -166,8 +166,9 @@ select {
   height: auto;
   margin-top: calc(var(--unidad-base) * 0.5);
   border-radius: var(--borde-redondeado);
-  box-shadow: var(--sombra-suave);
-  object-fit: cover;
+  box-shadow: var(--sombra-suave );
+  object-fit: contain;
+  
 
 }
 
@@ -176,6 +177,7 @@ select {
   color: var(--color-fondo);
   text-decoration: none;
   border-radius: var(--borde-redondeado);
+  
 
 }
 
@@ -188,12 +190,12 @@ select {
     color: var(--color-fondo);
     padding: calc(var(--unidad-base) * 1) calc(var(--unidad-base) * 2);
     background-color: var(--color-1);
-    border-radius: var(--borde-redondeado);
+    /* border-radius: var(--borde-redondeado); */
     box-shadow: var(--sombra-suave);
-    position: absolute;
+    /* position: absolute;
     top: 20%;
     left: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%); */
 
     
 }
