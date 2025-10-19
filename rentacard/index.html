@@ -24,17 +24,18 @@
     </header>
     <main class="contenido-principal">
         <div class="introduccion">
-                        <h2 class="propuesta-valor">Tu aventura comienza con el auto perfecto</h2>
+            <h2 class="propuesta-valor">Tu aventura comienza con el auto perfecto</h2>
         </div>
         <img class="imagen-principal" src="/rentacard/recursos/imagen-principal.png" alt="imagen principal de autos" title="imagen principal de autos">
 
         <section class="seccion-inicio" >
-            <h2 class="segundo-titulo"><a id="">Explora nuestra flotilla de vehiculos </a></h2>
+            <h2 class="segundo-titulo"><a>Explora nuestra flotilla de vehiculos </a></h2>
             <p class="text1">Desde compactos económicos hasta SUV de lujo, tenemos el auto ideal para cada ocasión.</p>
             
             <article class="articulo1">
                 <h3 class="titulo-articulo " >¿Por qué elegir RentCard?</h3>
-                <ul class="lista-motivos">
+                <!-- se cambio de ul a div -->
+                <div class="lista-motivos">
                     <div>
                         <img src="https://img.icons8.com/?size=100&id=16231&format=png&color=000000" alt="icono de seguro" title="icono de seguro">
                         <h4>Seguro incluido</h4>
@@ -50,66 +51,54 @@
                         <h4>Soporte 24/7</h4>
                         <p>Nuestro equipo de atención al cliente está disponible las 24 horas del día, los 7 días de la semana.</p>
                     </div>
-                </ul>
+                </div>
             <div class="linea-separacion" ><hr></div>
 
             </article>
             <h2 class="titulo-tipos-autos" id="autos">Tipos de autos</h2>
-            <ul class="lista-categorias-card" >
+            <!-- cambiar de ul a div -->
+            <div class="lista-categorias-card" >
                 <div>
                     <img src="/rentacard/recursos/auto-compacto.jfif" alt="Autos Compactos" title="Auto Compacto" >
                     <h3>Autos Compactos</h3>
                     <p>Ideal para la ciudad y viajes cortos.</p>
-                    <button>
-                        <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
-                    </button >
+                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
 
                 </div>
                 <div>
                     <img src="/rentacard/recursos/sedanes.webp" alt="Sedanes" title="Sedanes">
                     <h3>Sedanes</h3>
                     <p>Un vehículo clásico de cuatro puertas que ofrece máxima comodidad y espacio.</p>
-                    <button>
-                        <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
-                    </button>
+                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
              
                 </div>
                 <div>
                     <img src="/rentacard/recursos/yeepeta.jpg" alt="Yeepetas"  title="Yeepetas">
                     <h3>SUV</h3>
                     <p>ideal para familias y exploradores. Ofrece una posición de manejo elevada (mayor visibilidad).</p>
-                    <button>
-                        <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
-                    </button>
-
+                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
                 </div>
                 <div>
                     <img src="/rentacard/recursos/camioneta.webp" alt="Camionetas" title="Camionetas">
                     <h3>Camionetas</h3>
                     <p>Vehículo robusto, la mejor opción para trabajo, proyectos o para transportar carga pesada.</p>
-                    <button>
-                        <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
-                    </button>
-
+                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
                 </div>
                 <div>
                     <img src="/rentacard/recursos/lujo.jfif" alt="Autos de lujo" title="Autos de lujo">
                     <h3>Autos de lujo</h3>
                     <p>Eleve su experiencia de viaje. Esta categoría ofrece diseño exclusivo, materiales de alta calidad/</p>
-                    <button>
-                        <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
-                    </button>
+                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
                 </div>
-            </ul>
+            </div>
         </section>
 
         <div class="linea-separacion" ><hr></div>
 
         <h2  class="testimonios-titulo">Lo que dicen nuestros clientes</h2>
         <section class="testimonios" id="#"> 
-            
             <div>
-                <img src="/rentacard/recursos/juan miguel.webp" alt="imagen de usuario" title="imagen de usuario">                
+                <img src="/rentacard/recursos/juan-miguel.webp" alt="imagen de usuario" title="imagen de usuario">                
                 <h3>Juan Mendez</h3>
                 <p>"RentCard hizo que alquilar un auto fuera sencillo y asequible. ¡Totalmente recomendado!" - Juan P.</p>
             </div>
@@ -126,64 +115,56 @@
 
         </section>
 
+        <div class="linea-separacion" ><hr></div>
         <section class="seccion-registro">
 
             <h2 id="reservacion">Reservacion</h2>
-            <form action="" id="formulario">
-                <label for="nombre completo">
-                    <input id="nombre-completo" type="text" placeholder="Nombre completo" title="Nombre Completo" aria-label="nombre" required>
-                    <p class="message"></p>
-                </label>
-                <label for="email">
-                    <input id="email" type="email" placeholder="Email" title="Correo Eletronico" aria-label="email"  required>
-                </label>
-
-                <label for="telefono">
-                    <input id="numero-telefonico" type="number" placeholder="Telefono" title="Telefono" aria-label="telefono" required>
-                </label>
-
-                <label for="marca-vehiculo-id">
-                    <select name="Marca" id="marca-vehiculo" title="Marca del vehiculo" required  >
-                        <option value="" disabled selected >Elija la marca</option>
-
-                        <option value="valor1">ford</option>
-                        <option value=valor2>chevrolet</option>
-                        <option value="valor3">nissan</option>
-                        <option value="valor4">honda</option>
-                        <option value="valor5">toyota</option>
-                    </select>
-                </label>
-
-                <label for="modelo-vehiculo-id">
-                    <select name="Modelo" id="modelo-vehiculo-id" title="Modelo del vehiculo"  required  >
-                        <option value="" disabled selected >Elija el modelo</option>
-
-                        <option value="valor1">mustang</option>
-                        <option value=valor2>camaro</option>
-                        <option value="valor3">altima</option>
-                        <option value="valor4">civic</option>
-                        <option value="valor5">corolla</option>
-                    </select>
-                </label>
+            <form action="/ruta-procesamiento" method="post" id="formulario">
+                <label for="nombre-completo"></label>
+                <input id="nombre-completo" type="text" placeholder="Nombre completo" title="Nombre Completo" aria-label="nombre" required>
+                <p class="message"></p>
                 
-                <label for="localidad de retiro">
-                    <select name="sucursal" id="localidad-retiro-id" title="Sucursal donde retirara el vehiculo" required >
-                        <option value="" disabled selected >Elija la sucursal de retiro</option>
+                <label for="email"></label>
+                <input id="email" type="email" placeholder="Email" title="Correo Eletronico" aria-label="email"  required>
 
-                        <option value="valor1">Sucursal 1</option>
-                        <option value=valor2>Sucursal 2</option>
-                        <option value="valor3">Sucursal 3</option>
+                <label for="numero-telefonico"></label>
+                <input id="numero-telefonico" type="number" placeholder="Telefono" title="Telefono" aria-label="telefono" required>
+
+                <label for="marca-vehiculo-id"></label>
+                <select name="Marca" id="marca-vehiculo-id" title="Marca del vehiculo" required  >
+                    <option value="" disabled selected >Elija la marca</option>
+
+                    <option value="valor1">ford</option>
+                    <option value=valor2>chevrolet</option>
+                    <option value="valor3">nissan</option>
+                    <option value="valor4">honda</option>
+                    <option value="valor5">toyota</option>
                     </select>
-                </label>
 
-                <label for="fecha">
-                    <input type="date" title="Fecha de reserva" aria-label="fecha" required>
-                </label>
+                <label for="modelo-vehiculo-id"></label>
+                <select name="Modelo" id="modelo-vehiculo-id" title="Modelo del vehiculo"  required  >
+                    <option value="" disabled selected >Elija el modelo</option>
 
-                <label class="btn-reservacion" for="enviar">
-                    <input type="submit" value="Reservar ahora">
-                </label>
+                    <option value="valor1">mustang</option>
+                    <option value=valor2>camaro</option>
+                    <option value="valor3">altima</option>
+                    <option value="valor4">civic</option>
+                    <option value="valor5">corolla</option>
+                    </select>
+                
+                <label for="localidad-retiro-id"></label>
+                <select name="sucursal" id="localidad-retiro-id" title="Sucursal donde retirara el vehiculo" required >
+                    <option value="" disabled selected >Elija la sucursal de retiro</option>
 
+                    <option value="valor1">Sucursal 1</option>
+                    <option value=valor2>Sucursal 2</option>
+                    <option value="valor3">Sucursal 3</option>
+                    </select>
+
+                <label for="fecha-reservacion-id"></label>
+                <input type="date" id="fecha-reservacion-id" title="Fecha de reserva" aria-label="fecha" name="fecha" required>
+
+                <input class="btn-reservacion"  type="submit" value="Reservar ahora">
 
             </form>
 
@@ -194,7 +175,7 @@
         <section class="seccion-contacto">
             <h2 class="Contacto">Contáctanos</h2>
             <p>¿Tienes preguntas? ¿Necesitas ayuda con tu reserva? Estamos aquí para ayudarte.</p>
-            <p>Email: ejemplo@gmail.com | Teléfono: +123 456 7890 <a href="#" target="_blank" rel="noopener noreferrer">whatsapp</a></p>
+            <p>Email: rentacard@gmail.com | Teléfono: +123 456 7890 <a href="#" target="_blank" rel="noopener noreferrer">whatsapp</a></p>
 
         </section>
     </main>
@@ -202,13 +183,13 @@
     <br>
 
     <footer class="footer-principal">
-        <p>&copy; 2024 RentCard. Todos los derechos reservados.</p>
+        <p>&copy; 2025 RentCard. Todos los derechos reservados.</p>
         <p>Contacto:
-        <ul class="lista-redes-sociales">
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">X</a></li>
-        </ul>    
+        <div class="lista-redes-sociales">
+            <div><a href="#"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="facebook" title="facebook"></a></div>
+            <div><a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="instagram" title="instagram"></a></div>
+            <div><a href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/?size=100&id=YfCbGWCWcuar&format=png&color=000000" alt="x" title="x"></a></div>
+        </div>    
     
     </footer>
 
