@@ -100,13 +100,9 @@ select {
 
     /* 
     La función clamp() toma tres valores, separados por comas, en el siguiente orden:
-
         min (Valor Mínimo): El valor más bajo que la propiedad puede tomar.
-
         pref (Valor Preferido): El valor ideal que la propiedad intentará usar.
-
         max (Valor Máximo): El valor más alto que la propiedad puede tomar.
-
             La sintaxis es: propiedad: clamp(min, pref, max);
     */
 
@@ -154,6 +150,28 @@ select {
     
     
 }
+
+.nav-toggle{
+  display: none;
+}
+
+/* .nav-hamburguesa{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  display: inline-block;
+}
+
+.nav-hamburguesa span{
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #FF5722;
+  border-radius: var(--borde-redondeado);
+} */
+
 /* estilos para moviles  */
 @media (max-width: 768px) {
     .navegacion-principal {
@@ -173,7 +191,7 @@ select {
     padding: 38px;
     
     
-    
+    /* Samuel123 */
   }
 /* 
   @media (max-width: 300px )and( min-width: 932px) {
@@ -757,4 +775,8 @@ select {
 .lista-redes-sociales img:hover{
   transform: scale(1.1);
   transition: transform 0.3s ease;
+}
+
+.contenedor{
+  display: none;
 }

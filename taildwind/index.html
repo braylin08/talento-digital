@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Tailwind | Card</title>
+
+    <!-- Play CDN solamente es para desarrollo no se lleva a produccion  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-slate-600 ">
+
+    <header class=" rounded-xl text-center p-3 mt-32  w-2xl flex  bg-slate-400 mx-auto" >
+        <img class="rounded-full w-36   " src="/rentacard/recursos/vallejo.jfif" alt="imagen perfil" title="imagen de perfil " >
+        <div class="m-2 p-2  text-center  rounded-2xl shadow-2xl ">
+            <h1 class=" font-serif text-2xl p-4 ">Braylin Acevedo</h1>
+            <h2 class=" text-sm ml-2   " >Un Dev de full stack web de Republica Dominicana </h2>
+            <p class=" text-justify mt-2" >Soy un programador junior con conocimientos en html, css, tailwind, javascript, react y django</p>
+            <ul class=" gap-2 mx-auto flex justify-center mt-3   ">
+                <li class="rounded-full w-20 bg-white cursor-crosshair hover:scale-105 transition-transform  " >Tailwind</li>
+                <li class="rounded-full w-20 bg-white cursor-crosshair hover:scale-105 transition-transform  ">React</li>
+                <li class="rounded-full w-20 bg-white cursor-crosshair hover:scale-105 transition-transform  ">Next.js</li>
+                <li class="rounded-full w-20 bg-white cursor-crosshair hover:scale-105 transition-transform  ">django</li>
+                
+            </ul>
+        </div>
+    </header>
+    <main class="m-3 flex justify-evenly rounded-md content-between bg-slate-400 w-2xl   gap-4 mx-auto " >
+
+        <label class=" m-5 block  rounded-2xl mx-auto text-center   " for="">
+            <button class="rounded-full  p-2  hover:bg-orange-600 hover:scale-110 transition-transform  cursor-pointer bg-indigo-600 w-26 mt-1 " type="button" a ><a href="#">Portafolio</a></button>
+        </label>
+
+            <a class= " p-4 block  hover:scale-110 transition-transform rounded-2xl shadow-2xl  " href="braylinsamuel6@gmail.com" target="_blank" title="Correo" >
+                <img class="size-14" src="https://img.icons8.com/?size=100&id=19408&format=png&color=000000" alt="mail">
+            </a>
+            <a class=" p-4 block  hover:scale-110 transition-transform rounded-2xl shadow-2xl " href="https://www.instagram.com" target="_blank" title="instagram" >
+                <img class="size-14" src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="" >
+            </a>
+            <a class=" p-4 block  hover:scale-110 transition-transform rounded-2xl shadow-2xl " href="https://www.linkedin.com/" target="_blank" title="linkedin" >
+                <img class="size-14" src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="">
+            </a>
+            <a class=" p-4 block  hover:scale-110 transition-transform rounded-2xl shadow-2xl " href="https://github.com//" target="_blank" title="GitHud" >
+                <img class="size-14" src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" alt="GitHud">
+            </a>
+    </main>
+    
+</body>
+</html>
+

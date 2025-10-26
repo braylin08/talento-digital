@@ -14,6 +14,14 @@
     <header class="header-principal">
         <nav class="navegacion-principal">
             <h1 class="titulo-principal">RentCard</h1>
+            
+            <!-- menu hamburguesa para moviles -->
+
+            <input id="nav-toggle" type="checkbox" name="" id="">
+            <label for="nav-toggle" class="nav-hamburguesa" aria-label="" >
+                <span></span><span></span><span></span>
+            </label>
+            
             <ul>
                 <li><a href="#home" rel="noopener noreferrer">Inicio</a></li>
                 <li><a href="#autos" rel="noopener noreferrer">Autos</a></li>
@@ -22,7 +30,7 @@
             </ul>
         </nav>
     </header>
-    <main class="contenido-principal">
+    <main class="contenido-principal" id="home">
         <div class="introduccion">
             <h2 class="propuesta-valor">Tu aventura comienza con el auto perfecto</h2>
         </div>
@@ -103,7 +111,7 @@
                 <p>"RentCard hizo que alquilar un auto fuera sencillo y asequible. ¡Totalmente recomendado!" - Juan P.</p>
             </div>
             <div>
-                <img src="/rentacard/recursos/alejandro.jfif" alt="imagen de usuario" title="imagen de usuario">                
+                <img src="/rentacard/recursos/alejandro.jfif?v=1" alt="imagen de usuario" title="imagen de usuario">                
                 <h3>Alejandro Brazoban</h3>
                 <p>"Excelente servicio al cliente y una gran selección de vehículos." - María L.</p>
             </div>
@@ -130,6 +138,7 @@
                 <label for="numero-telefonico"></label>
                 <input id="numero-telefonico" type="number" placeholder="Telefono" title="Telefono" aria-label="telefono" required>
 
+                
                 <label for="marca-vehiculo-id"></label>
                 <select name="Marca" id="marca-vehiculo-id" title="Marca del vehiculo" required  >
                     <option value="" disabled selected >Elija la marca</option>
@@ -141,16 +150,18 @@
                     <option value="valor5">toyota</option>
                     </select>
 
-                <label for="modelo-vehiculo-id"></label>
-                <select name="Modelo" id="modelo-vehiculo-id" title="Modelo del vehiculo"  required  >
-                    <option value="" disabled selected >Elija el modelo</option>
+                <div class="contenedor">
+                    <label for="modelo-vehiculo-id"></label>
+                    <select name="Modelo" id="modelo-vehiculo-id" title="Modelo del vehiculo"  required  >
+                        <option value="" disabled selected >Elija el modelo</option>
 
-                    <option value="valor1">mustang</option>
-                    <option value=valor2>camaro</option>
-                    <option value="valor3">altima</option>
-                    <option value="valor4">civic</option>
-                    <option value="valor5">corolla</option>
-                    </select>
+                        <option value="valor1">mustang</option>
+                        <option value=valor2>camaro</option>
+                        <option value="valor3">altima</option>
+                        <option value="valor4">civic</option>
+                        <option value="valor5">corolla</option>
+                        </select>
+                </div>
                 
                 <label for="localidad-retiro-id"></label>
                 <select name="sucursal" id="localidad-retiro-id" title="Sucursal donde retirara el vehiculo" required >

@@ -5,7 +5,14 @@ const email = document.getElementById("email");
 const telefono = document.getElementById("numero-telefonico");
 
 
+// seleccion de opciones
+const selecion_marca_vehiculo = document.getElementById("marca-vehiculo-id");
+const selecion_modelo_vehiculo = document.getElementById("modelo-vehiculo-id");
+const localidad = document.getElementById("localidad-retiro-id");
 
+
+// selector para el cambiar el estilo del contenedor desde js 
+const contenedor = document.querySelector(".contenedor");
 
 
 
@@ -68,7 +75,10 @@ function validacionarFormulario(event) {
         console.log("se valido el telefono y se envio el formulario")
     }
 
+    //VALIDACION PARA LA OPCION DE SELECION
 
+
+    
 
     
 
@@ -76,3 +86,21 @@ function validacionarFormulario(event) {
 
 // evento para validar formulario
 validacion.addEventListener("submit", validacionarFormulario);
+
+    validacion.addEventListener("change",function(){
+
+    const selecion = selecion_marca_vehiculo.value;
+    // const selecion_modelo = selecion_modelo_vehiculo.value;
+
+    console.log(selecion);
+    if (selecion !== 1) {
+        contenedor.style.display = 'block'; // Lo hace visible
+        console.log("funciono");
+
+
+
+    } else {
+        contenedor.style.display = 'none'; // Lo vuelve a ocultar
+        console.log("no funciono ")
+    }
+})
