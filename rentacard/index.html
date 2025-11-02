@@ -15,13 +15,6 @@
         <nav class="navegacion-principal">
             <h1 class="titulo-principal">RentCard</h1>
             
-            <!-- menu hamburguesa para moviles -->
-
-            <input id="nav-toggle" type="checkbox" name="" id="">
-            <label for="nav-toggle" class="nav-hamburguesa" aria-label="" >
-                <span></span><span></span><span></span>
-            </label>
-            
             <ul>
                 <li><a href="#home" rel="noopener noreferrer">Inicio</a></li>
                 <li><a href="#autos" rel="noopener noreferrer">Autos</a></li>
@@ -130,14 +123,15 @@
             <form action="/ruta-procesamiento" method="post" id="formulario">
                 <label for="nombre-completo"></label>
                 <input id="nombre-completo" type="text" placeholder="Nombre completo" title="Nombre Completo" aria-label="nombre" required>
-                <p class="message"></p>
+                <p class="message-nombre"></p>
                 
                 <label for="email"></label>
                 <input id="email" type="email" placeholder="Email" title="Correo Eletronico" aria-label="email"  required>
+                 <p class="message-email"></p>
 
                 <label for="numero-telefonico"></label>
                 <input id="numero-telefonico" type="number" placeholder="Telefono" title="Telefono" aria-label="telefono" required>
-
+                <p class="message-telefono"></p>
                 
                 <label for="marca-vehiculo-id"></label>
                 <select name="Marca" id="marca-vehiculo-id" title="Marca del vehiculo" required  >
@@ -150,7 +144,6 @@
                     <option value="valor5">toyota</option>
                     </select>
 
-                <div class="contenedor">
                     <label for="modelo-vehiculo-id"></label>
                     <select name="Modelo" id="modelo-vehiculo-id" title="Modelo del vehiculo"  required  >
                         <option value="" disabled selected >Elija el modelo</option>
@@ -161,7 +154,6 @@
                         <option value="valor4">civic</option>
                         <option value="valor5">corolla</option>
                         </select>
-                </div>
                 
                 <label for="localidad-retiro-id"></label>
                 <select name="sucursal" id="localidad-retiro-id" title="Sucursal donde retirara el vehiculo" required >
@@ -174,6 +166,8 @@
 
                 <label for="fecha-reservacion-id"></label>
                 <input type="date" id="fecha-reservacion-id" title="Fecha de reserva" aria-label="fecha" name="fecha" required>
+                <p class="message-resultado"></p>
+
 
                 <input class="btn-reservacion"  type="submit" value="Reservar ahora">
 
