@@ -129,6 +129,26 @@ function validacionarFormulario(event) {
     });
 
 }
+const menuToggle = document.getElementById('btn-activar');
+    const navLinks = document.getElementById('navegacion');
+
+    menuToggle.addEventListener('click', () => {
+        // La función .toggle() se encarga de quitar 'hidden' para mostrar el menú,
+        // y de volver a poner 'hidden' para ocultarlo.
+        navLinks.classList.toggle('hidden');
+    });
+
+    // OPCIONAL pero MUY RECOMENDADO: Asegurar que el menú esté visible en escritorio
+    // Si el usuario redimensiona la ventana, el menú debe aparecer en pantallas grandes.
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) { // 768px es el breakpoint 'md' de Tailwind
+            navLinks.classList.remove('hidden');
+        } else {
+             // Oculta el menú si se redimensiona a móvil (si no está abierto)
+             // Esto evita un bug visual si se cierra el teclado virtual.
+             // Aquí puedes añadir lógica para mantener el menú cerrado si el usuario lo cerró.
+        }
+    });
 
 
 

@@ -5,51 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>RentCard</title>
-    <link rel="stylesheet" href="/rentacard/style/styles.css"> 
+    <!-- <link rel="stylesheet" href="/rentacard/style/styles.css">  -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=gty4PhlqCKxZ&format=png&color=000000" type="image/x-icon">
+    <link href="/rentacard/assets/output.css" rel="stylesheet">
+
+
 
 </head>
 <body>
-    <header class="header-principal">
-        <nav class="navegacion-principal">
-            <h1 class="titulo-principal">RentCard</h1>
-            
-            <ul>
-                <li><a href="#home" rel="noopener noreferrer">Inicio</a></li>
-                <li><a href="#autos" rel="noopener noreferrer">Autos</a></li>
-                <li><a href="#reservacion" rel="noopener noreferrer">Reservar</a></li>
-                <li class="cta"><a href="#reservacion" rel="noopener noreferrer">Reserva Ahora</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="contenido-principal" id="home">
-        <div class="introduccion">
-            <h2 class="propuesta-valor">Tu aventura comienza con el auto perfecto</h2>
-        </div>
-        <img class="imagen-principal" src="/rentacard/recursos/imagen-principal.png" alt="imagen principal de autos" title="imagen principal de autos">
+<header class="bg-gray-800 p-4 shadow-lg fixed w-full z-10">
+    <nav class="flex items-center justify-between max-w-7xl mx-auto">
+        
+        <h1 class="text-2xl font-bold text-white  px-2 rounded">
+            RentCard
+        </h1>
+        
+        <button id="btn-activar" class="text-white md:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
 
-        <section class="seccion-inicio" >
+        <ul id="navegacion" class="hidden   /* 1. Por defecto, oculto en TODAS las pantallas (CSS base) */
+            absolute top-full left-0 w-full bg-gray-700 p-4  /* 2. Estilos cuando está desplegado en móvil */
+            md:static md:flex md:space-x-6 md:p-0 md:w-auto md:bg-gray-800 /* 3. Sobreescribe 'hidden' y estiliza para escritorio */
+        ">
+            <li><a href="#home" class="text-white block py-2 md:py-0">Inicio</a></li>
+            <li><a href="#autos" class="text-white block py-2 md:py-0">Autos</a></li>
+            <li><a href="#reservacion" class="text-white hover:rounded-2xl hover:bg-primery-400 block align-text-bottom py-2 md:py-0">Reservar</a></li>
+            
+            <li class="cta mt-2 md:mt-0">
+                <a href="#reservacion" class=" text-white bg-cta hover:bg-amber-400 px-4 py-2 rounded-lg  transition duration-300 block text-center">
+                    Reserva Ahora
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="contenido-principal" id="home">
+        <div class="introduccion  ">
+            <h2 class="propuesta-valor text-2xl pt50   ">Tu aventura comienza con el auto perfecto</h2>
+        </div>
+        <img class="imagen-principal size-1  " src="/rentacard/recursos/imagen-principal.png" alt="imagen principal de autos" title="imagen principal de autos">
+
+        <section class="seccion-inicio items-center justify-center   "   >
             <h2 class="segundo-titulo"><a>Explora nuestra flotilla de vehiculos </a></h2>
             <p class="text1">Desde compactos económicos hasta SUV de lujo, tenemos el auto ideal para cada ocasión.</p>
             
-            <article class="articulo1">
-                <h3 class="titulo-articulo " >¿Por qué elegir RentCard?</h3>
+            <article class="articulo1 items-center justify-center text-center ">
+                <h3 class=" items-center justify-center text-4xl " >¿Por qué elegir RentCard?</h3>
                 <!-- se cambio de ul a div -->
-                <div class="lista-motivos">
-                    <div>
-                        <img src="https://img.icons8.com/?size=100&id=16231&format=png&color=000000" alt="icono de seguro" title="icono de seguro">
-                        <h4>Seguro incluido</h4>
+                <div class="lista-motivos border-4 p-2 " >
+                    <div class="p-2" >
+                        <img class="mx-auto block" src="https://img.icons8.com/?size=100&id=16231&format=png&color=000000" alt="icono de seguro" title="icono de seguro">
+                        <h4 class="font-sans text-2xl" >Seguro incluido</h4>
                         <p>Todos nuestros vehículos incluyen seguro básico para tu tranquilidad.</p>
                     </div>
-                    <div>
-                        <img src="https://img.icons8.com/?size=100&id=Udrc3LA8OPbn&format=png&color=000000" alt="icono de ubicacion" title="icono de ubicacion">
-                        <h4>Varias ubicaciones</h4>
+                    <div class="p-2">
+                        <img class="mx-auto block" src="https://img.icons8.com/?size=100&id=Udrc3LA8OPbn&format=png&color=000000" alt="icono de ubicacion" title="icono de ubicacion">
+                        <h4 class="font-sans text-2xl">Varias ubicaciones</h4>
                         <p>Ofrecemos múltiples puntos de recogida y devolución en toda la ciudad.</p>
                     </div>
                     <div>
-                        <img src="https://img.icons8.com/?size=100&id=qjx0bpyjETKX&format=png&color=000000" alt="icono de soporte" title="icono de soporte">
-                        <h4>Soporte 24/7</h4>
+                        <img class="mx-auto block" src="https://img.icons8.com/?size=100&id=qjx0bpyjETKX&format=png&color=000000" alt="icono de soporte" title="icono de soporte">
+                        <h4 class="font-sans text-2xl" >Soporte 24/7</h4>
                         <p>Nuestro equipo de atención al cliente está disponible las 24 horas del día, los 7 días de la semana.</p>
                     </div>
                 </div>
@@ -58,60 +79,60 @@
             </article>
             <h2 class="titulo-tipos-autos" id="autos">Tipos de autos</h2>
             <!-- cambiar de ul a div -->
-            <div class="lista-categorias-card" >
-                <div>
-                    <img src="/rentacard/recursos/auto-compacto.jfif" alt="Autos Compactos" title="Auto Compacto" >
-                    <h3>Autos Compactos</h3>
-                    <p>Ideal para la ciudad y viajes cortos.</p>
-                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
+            <div class="lista-categorias-card text-center   " >
+                <div class="bg-2 p-2 m-2 rounded-2xl ">
+                    <img class=" w-2xl rounded-2xl mx-auto " src="/rentacard/recursos/auto-compacto.jfif" alt="Autos Compactos" title="Auto Compacto" >
+                    <h3 class="text-xl" >Autos Compactos</h3>
+                    <p class=" p-1 ">Ideal para la ciudad y viajes cortos.</p>
+                    <a class=" bg-cta rounded-2xl px-2 hover:bg-orange-500   " href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
 
                 </div>
-                <div>
-                    <img src="/rentacard/recursos/sedanes.webp" alt="Sedanes" title="Sedanes">
-                    <h3>Sedanes</h3>
-                    <p>Un vehículo clásico de cuatro puertas que ofrece máxima comodidad y espacio.</p>
-                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
+                <div class="bg-2 p-2 m-2 rounded-2xl ">
+                    <img class=" w-2xl rounded-2xl mx-auto " src="/rentacard/recursos/sedanes.webp" alt="Sedanes" title="Sedanes">
+                    <h3 class="text-xl" >Sedanes</h3>
+                    <p class="p-1" >Un vehículo clásico de cuatro puertas que ofrece máxima comodidad y espacio.</p>
+                    <a  class=" bg-cta rounded-2xl px-2 hover:bg-1    " href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
              
                 </div>
-                <div>
-                    <img src="/rentacard/recursos/yeepeta.jpg" alt="Yeepetas"  title="Yeepetas">
-                    <h3>SUV</h3>
-                    <p>ideal para familias y exploradores. Ofrece una posición de manejo elevada (mayor visibilidad).</p>
-                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
+                <div  class="bg-2 p-2 m-2 rounded-2xl ">
+                    <img class=" w-2xl rounded-2xl mx-auto " src="/rentacard/recursos/yeepeta.jpg" alt="Yeepetas"  title="Yeepetas">
+                    <h3 class="text-xl"  >SUV</h3>
+                    <p class="p-1">ideal para familias y exploradores. Ofrece una posición de manejo elevada (mayor visibilidad).</p>
+                    <a class=" bg-cta rounded-2xl px-2 hover:bg-1    " href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
                 </div>
-                <div>
-                    <img src="/rentacard/recursos/camioneta.webp" alt="Camionetas" title="Camionetas">
-                    <h3>Camionetas</h3>
-                    <p>Vehículo robusto, la mejor opción para trabajo, proyectos o para transportar carga pesada.</p>
-                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
+                <div class="bg-2 p-2 m-2 rounded-2xl ">
+                    <img class=" w-2xl rounded-2xl mx-auto " src="/rentacard/recursos/camioneta.webp" alt="Camionetas" title="Camionetas">
+                    <h3 class="text-xl">Camionetas</h3>
+                    <p class="p-1">Vehículo robusto, la mejor opción para trabajo, proyectos o para transportar carga pesada.</p>
+                    <a class=" bg-cta rounded-2xl px-2 hover:bg-1    " href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
                 </div>
-                <div>
+                <div class="bg-2 p-2 m-2 rounded-2xl ">
                     <img src="/rentacard/recursos/lujo.jfif" alt="Autos de lujo" title="Autos de lujo">
-                    <h3>Autos de lujo</h3>
-                    <p>Eleve su experiencia de viaje. Esta categoría ofrece diseño exclusivo, materiales de alta calidad/</p>
-                    <a href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
+                    <h3 class="text-xl">Autos de lujo</h3>
+                    <p class="p-1">Eleve su experiencia de viaje. Esta categoría ofrece diseño exclusivo, materiales de alta calidad/</p>
+                    <a class=" bg-cta rounded-2xl px-2 hover:bg-1    " href="#reservacion" title="Reservar ahora" aria-label="Reservar ahora">Reservar ahora</a>
                 </div>
             </div>
         </section>
 
         <div class="linea-separacion" ><hr></div>
 
-        <h2  class="testimonios-titulo">Lo que dicen nuestros clientes</h2>
+        <h2 class="testimonios-titulo text-center text-2xl m-2 p-2 ">Lo que dicen nuestros clientes</h2>
         <section class="testimonios" id="#"> 
-            <div>
-                <img src="/rentacard/recursos/juan-miguel.webp" alt="imagen de usuario" title="imagen de usuario">                
-                <h3>Juan Mendez</h3>
-                <p>"RentCard hizo que alquilar un auto fuera sencillo y asequible. ¡Totalmente recomendado!" - Juan P.</p>
+            <div class="bg-2 border-1 text-center p-2 m-2 rounded-2xl shadow-1 ">
+                <img class="size-40 object-cover rounded-full mx-auto " src="/rentacard/recursos/juan-miguel.webp" alt="imagen de usuario" title="imagen de usuario">                
+                <h3 class="text-xl pt-2 text-5 ">Juan Mendez</h3>
+                <p class="text-sm p-2 m-1 text-5 ">"RentCard hizo que alquilar un auto fuera sencillo y asequible. ¡Totalmente recomendado!" - Juan P.</p>
             </div>
-            <div>
-                <img src="/rentacard/recursos/alejandro.jfif?v=1" alt="imagen de usuario" title="imagen de usuario">                
-                <h3>Alejandro Brazoban</h3>
-                <p>"Excelente servicio al cliente y una gran selección de vehículos." - María L.</p>
+            <div  class="bg-2 border-1 text-center p-2 m-2 rounded-2xl shadow-1 ">
+                <img class="size-40 object-cover rounded-full mx-auto " src="/rentacard/recursos/alejandro.jfif?v=1" alt="imagen de usuario" title="imagen de usuario">                
+                <h3 class="text-xl p2-2  text-5 ">Alejandro Brazoban</h3>
+                <p class="text-sm p-2 m-1 text-5 ">"Excelente servicio al cliente y una gran selección de vehículos." - María L.</p>
             </div>
-            <div>
-                <img src="/rentacard/recursos/vallejo.jfif" alt="imagen de usuario" title="imagen de usuario">
-                <h3>Miguel vallejo</h3>
-                <p>"La mejor experiencia de alquiler de autos que he tenido. ¡Volveré seguro!" - Carlos R.</p>
+            <div class="bg-2 border-1 text-center p-2 m-2 rounded-2xl shadow-1 " >
+                <img class="size-40 object-cover rounded-full mx-auto " src="/rentacard/recursos/vallejo.jfif" alt="imagen de usuario" title="imagen de usuario">
+                <h3 class="text-xl pt-2 text-5 " >Miguel vallejo</h3>
+                <p class="text-sm p-2 m-1 text-5 " >"La mejor experiencia de alquiler de autos que he tenido. ¡Volveré seguro!" - Carlos R.</p>
             </div>
 
         </section>
@@ -119,14 +140,15 @@
         <div class="linea-separacion" ><hr></div>
         <section class="seccion-registro">
 
-            <h2 id="reservacion">Reservacion</h2>
-            <form action="/ruta-procesamiento" method="post" id="formulario">
-                <label for="nombre-completo"></label>
-                <input id="nombre-completo" type="text" placeholder="Nombre completo" title="Nombre Completo" aria-label="nombre" required>
+            <h2 id="reservacion" class=" text-2xl text-center" >Reservacion</h2>
+            <form class="bg-4 flex flex-col items-center p-2   " action="/ruta-procesamiento" method="post" id="formulario">
+                
+                <label class="" for="nombre-completo"></label>
+                <input id="nombre-completo" class=" border border-amber-400 shadow rounded-2xl p-1 m-2" type="text" placeholder="Nombre completo" title="Nombre Completo" aria-label="nombre" required>
                 <p class="message-nombre"></p>
                 
                 <label for="email"></label>
-                <input id="email" type="email" placeholder="Email" title="Correo Eletronico" aria-label="email"  required>
+                <input class=" border border-indigo-600 rounded-2xl p-1" id="email" type="email" placeholder="Email" title="Correo Eletronico" aria-label="email"  required>
                  <p class="message-email"></p>
 
                 <label for="numero-telefonico"></label>
@@ -169,7 +191,7 @@
                 <p class="message-resultado"></p>
 
 
-                <input class="btn-reservacion"  type="submit" value="Reservar ahora">
+                <input class="btn-reservacion bg-cta px-2 rounded-3xl p-1 m-2  "  type="submit" value="Reservar ahora">
 
             </form>
 

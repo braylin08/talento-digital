@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+
+/* variables de css para tailwind */
+@theme{
+    
+/* paleta de colores */
+    --color-principal : #4CAF50;
+    --color-secundario : #FF9800;
+    --color-fondo : #f4f4f4;
+    --color-texto : #333;
+    --color-cta : #FF5722;
+
+    --color-1: #1e1f2a;
+    --color-2: #3a3f4b;
+    --color-3: #5c6575;
+    --color-4: #8a9db2;
+    --color-5: #f5e8c7;
+
+    /* tipografia y unidades */
+    --fuente-principal : 'Arial', sans-serif;
+    --fuente-secundaria : 'Verdana', sans-serif;
+    --unidad-base : 1.6rem; /* 16px */
+    --unidad-pequena : 1.2rem; /* 12px */
+    --unidad-grande : 3.4rem; /* 24px */
+
+    /* sombras y bordes */
+    --sombra-suave : 0 2px 4px rgba(0, 0, 0, 0.1);
+    --sombra-fuerte : 0 4px 8px rgba(0, 0, 0, 0.2);
+    --borde-redondeado : 8px;
+
+
+}
