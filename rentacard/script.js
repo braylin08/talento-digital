@@ -130,7 +130,7 @@ function validacionarFormulario(event) {
 
 }
 const menuToggle = document.getElementById('btn-activar');
-    const navLinks = document.getElementById('navegacion');
+const navLinks = document.getElementById('navegacion');
 
     menuToggle.addEventListener('click', () => {
         // La función .toggle() se encarga de quitar 'hidden' para mostrar el menú,
